@@ -21,9 +21,20 @@ const goal = 3;
 <a href="/blog/">Blog</a>
 
 <Layout title={pageTitle}>
-	<main>
+	<style>
+        h1 {
+            color: purple;
+            font-size: 4rem;
+        }
+        .skill {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <main>
 		<h1>Welcome to <span class="text-gradient">dj.blog</span></h1>
 		<h1>{pageTitle}</h1>
+        
         <h2>... and my new Astro site!</h2>
 
         <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
@@ -40,7 +51,7 @@ const goal = 3;
             </ul>
             <p>My skills are:</p>
                 <ul>
-                {skills.map((skill) => <li>{skill}</li>)}
+                {skills.map((skill) => <li class="skill">{skill}</li>)}
                 </ul>
 
         {happy && <p>I am happy to be learning Astro!</p>}
