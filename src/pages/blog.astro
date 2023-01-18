@@ -1,17 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "Blog";
 ---
 <a href="/">Home</a>
 <a href="/about/">About</a>
 <a href="/blog/">Blog</a>
 
-<Layout title="Welcome to dj.blog.">
+<Layout title={pageTitle}>
 	<main>
 		<h1>Welcome to <span class="text-gradient">dj.blog</span></h1>
-		<h1>Blog</h1>
+		<h1>{pageTitle}</h1>
         <h2>New Content Coming Soon!</h2>
         <p>This is where I will post about my journey learning Astro.</p>
+        <ul>
+            <li><a href="/posts/post-1/">Post 1</a></li>
+            <li><a href="/posts/post-2/">Post 2</a></li>
+            <li><a href="/posts/post-3/">Post 3</a></li> 
+        </ul>
 	</main>
 </Layout>
 
